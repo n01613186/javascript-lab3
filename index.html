@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 3: Arrays</title>
+</head>
+<body>
+    <h1>JavaScript Lab 3: Arrays</h1>
+    <p>Open the console to see the array operations.</p>
+
+    <script>
+        //Step 1: Declaring Arrays
+        let myArray = [50, 60, 70, 80, 90];
+        console.log('Step 1: Declared Array:', myArray);
+
+        // Step 2: Accessing Arrays
+        let firstElement = myArray[0];
+        let lastElement = myArray[myArray.length - 1];
+        let middleElement = myArray[Math.floor(myArray.length / 2)];
+
+        console.log('Step 2: First Element:', firstElement);
+        console.log('Last Element:', lastElement);
+        console.log('Middle Element:', middleElement);
+
+        // Step 3: Logging the length of the array
+        let arrayLength = myArray.length;
+        console.log('Step 3: Array Length:', arrayLength);
+
+        // Step 4: Array Methods
+        // Pushing a new number to the end of the array
+        myArray.push(100);
+        console.log('Step 4: After Push:', myArray);
+
+        // Removing the last element with pop()
+        myArray.pop();
+        console.log('After Pop:', myArray);
+
+        // Splicing to remove and add elements
+        myArray.splice(2, 1, 75); // Removes 1 element at index 2, adds 75
+        console.log('After Splice:', myArray);
+
+        // Step 5: Iterating Through Arrays
+        // Traditional for loop
+        console.log('Step 5: Iterating with for loop:');
+        for (let i = 0; i < myArray.length; i++) {
+            console.log(myArray[i]);
+        }
+
+        // Using forEach method
+        console.log('Iterating with forEach:');
+        myArray.forEach(number => console.log(number));
+
+        // Step 6: Array Destructuring
+        let [first, second, ...rest] = myArray;
+        console.log('Step 6: First Number:', first);
+        console.log('Second Number:', second);
+        console.log('Rest of the Numbers:', rest);
+    </script>
+</body>
+</html>
